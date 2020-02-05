@@ -1,0 +1,31 @@
+<?php
+$con= mysqli_connect("localhost","root","","bestcat"); //เชื่อมต่อฐานข้อมูล
+// Check connection
+if (mysqli_connect_errno()) {
+ echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+// post to variables /*รับค่าจากฟอร์ม*/
+$Code = 0;
+$Image  = $_POST['Image'];
+$Breed = $_POST['Breed'];
+$Farm = $_POST['Farm'];
+$Price = $_POST['Price'];
+$sql="INSERT INTO product (Code,Image,Breed,Farm,Price) VALUES ($Code, '$Image','$Breed','$Farm',$Price)"; /* SQL Insert*/
+if (!mysqli_query($con,$sql)) {
+ die('Error: ' . mysqli_error($con)); /*แสดง error ถ้าท างานไม่ได้*/
+}
+// อ่านค่า และท าการยืนยัน การบันทึก
+echo "1 record added";
+$result = mysqli_query($con,"SELECT * FROM product"); // DESC เรียงมากมาน้อย
+// แสดงค่าที่เพิ่งบันทึก เพียงรายการเดียว
+$row = mysqli_fetch_array($result);
+ echo "<table><tr>";
+ echo "<td>" . $row['Code'] . "</td>";
+ echo "<td>" . $row['Image'] . "</td>";
+ echo "<td>" . $row['Breed'] . "</td>";
+ echo "<td>" . $row['Farm'] . "</td>";
+ echo "<td>" . $row['Price'] . "</td>";
+ echo "</tr><table>";
+mysqli_close($con);
+// แสดงฟอร์ม แบบซ่อน มีปุ่ ม กลับไปหน้าแบบฟอร์ม หากกดปุ่ ม จะส่งไปไฟล์ Menu_insert.php
+?>

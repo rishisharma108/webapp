@@ -1,0 +1,24 @@
+<?php
+include 'Banner_menu.php';
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bestcat";
+$s_word = $_POST['f_word']; 
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+} 
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();   
+mysqli_close($conn);
+
+if(isset($_POST['f_word'])) { $s_word=$_POST['f_word']; // ถ้ามีตัวแปร f_word ส่งมา
+$sql="SELECT * FROM product WHERE Code LIKE '%".$s_word. "%' or Image LIKE '%".$s_word. "%' or Breed LIKE '%".$s_word."%' or Farm LIKE '%".$s_word. "%' or Price LIKE '%".$s_word. "%' ";
+// ก าหนด SQL สมมุติ ค้นหาได้จาก 2 ฟิ ลด์ คือ ฟิ ลด์ fname และ lname
+// %$s_word% จะเห็นว่า มี % อยู่ทั ้งหน้าและหลัง หมายถึง ค าที่ค้นจะอยู่ส่วนไหนของค าก็ได้
+}else{ $sql="SELECT * FROM product"; }
+
+include 'Footer_menu.php';
+?>

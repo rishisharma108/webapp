@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <!-- <body bgcolor="grey" background="pinkkuma.jpg"> -->
+ <body background="bg2.gif">
+ <center>
+ <marquee><img src="Wc1.gif" width="46" height="37" border="0" alt=""><b><FONT COLOR="#FF0000" size="5">W</FONT>        
+		  <FONT COLOR=#FF9900 size='5'>e</FONT>
+          <FONT COLOR=#FFFF00 size='5'>l</FONT>
+          <FONT COLOR=#99FF00 size='5'>c</FONT>
+          <FONT COLOR=#00FF00 size='5'>o</FONT>
+          <FONT COLOR=#00FF99 size='5'>m</FONT>
+          <FONT COLOR=#00FFFF size='5'>e</FONT></b></marquee><br>
+ <img src='Banner.png' width='1063' height='151' border='0' alt=''>
+ </center><br>
+ <table align='center' border=2 width='60%' bgcolor=#ffffcc>
+ <tr>
+	<td><center><img src='kao01.gif' width='24' height='24' border='0' alt=''><b><font size='3' font color=#0099ff><a href='index.php'>Home</a></font></b></center></td>
+	<td><center><img src='kao03.gif' width='24' height='24' border='0' alt=''><b><font size='3' font color=#0099ff><a href='Menu_list.php'>Cat List</a></font></b></center></td>
+	<td><center><img src='kao05.gif' width='24' height='24' border='0' alt=''><b><font size='3' font color=#0099ff><a href='Menu_insert.php'>Insert</a></font></b></center></td>
+	<td><center><img src='kao08.gif' width='24' height='24' border='0' alt=''><b><font size='3' font color=#0099ff><a href='Menu_delete.php'>Delete</a></font></b></center></td>
+	<td><center><img src='kao02.gif' width='24' height='24' border='0' alt=''><b><font size='3' font color=#0099ff><a href='Menu_update.php'>Update</a></font></b></center></td>
+	<td><center><img src='kao02.gif' width='24' height='24' border='0' alt=''><b><font size='3' font color=#0099ff><a href='Menu_search.php'>Search</a></font></b></center></td>
+</tr>
+</table><br>
+<table border=2 bordercolor="#ff6699" align="center" width="80%" height="50%" bgcolor="#ffccff">
+<caption><img src="99511.gif" width="30" height="30" border="0" alt=""><b><font size="5" font color="#3399ff">Cat of this Week</font></b></caption>
+<tr>
+	<td><center><font color="#3399ff">Code Number</font></center></td>
+	<td><center><font color="#3399ff">Image</font></center></td>
+	<td><center><font color="#3399ff">Breed</font></center></td>
+	<td><center><font color="#3399ff">Farm</font></center></td>
+	<td><center><font color="#3399ff">Price</font></center></td>
+</tr>
+<tr>
+	<td><center><font color="#3399ff">Am-001</font></center></td>
+	<td><center><a href="Am1.jpg"><img src="Am1.jpg" width="150" height="100" border="0" alt=""></a></center></td>
+	<td><center><font color="#3399ff">American Shorthair</font></center></td>
+	<td><center><font color="#3399ff">KJ Farm</font></center></td>
+	<td><center><font color="#3399ff">5000 Baht</font></center></td>
+</tr>
+<tr>
+	<td><center><font color="#3399ff">Sf-001</font></center></td>
+	<td><center><a href="Sc1.jpg"><img src="Sc1.jpg" width="150" height="100" border="0" alt=""></a></center></td>
+	<td><center><font color="#3399ff">Scottish Fold</font></center></td>
+	<td><center><font color="#3399ff">TH Farm</font></center></td>
+	<td><center><font color="#3399ff">15000 Baht</font></center></td>
+</tr>
+<tr>
+	<td><center><font color="#3399ff">Bs-001</font></center></td>
+	<td><center><a href="Bs1.jpg"><img src="Bs1.jpg" width="150" height="100" border="0" alt=""></a></center></td>
+	<td><center><font color="#3399ff">British Shorthair</font></center></td>
+	<td><center><font color="#3399ff">Cute Farm</font></center></td>
+	<td><center><font color="#3399ff">20000 Baht</font></center></td>
+</tr>
+</table>
+<hr><center>
+<font color="#000000"> &copy Copyright By Best Cat Shop by Ms.Thapanee Kaewprasert </font>
+</center>
+</hr>
+</body>
+</html>

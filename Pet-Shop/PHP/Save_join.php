@@ -1,0 +1,28 @@
+<?php
+$cust_code = $_POST['id']; 
+//echo "edit_id =".$Edit_id;
+$Select_id = $_POST['cat_id'];
+
+
+$vbottom = $_POST['valuesubmit']; 
+If($vbottom=="Save"){ 
+$con=mysqli_connect("localhost","root","","bestcat");
+
+If (mysqli_connect_errno()) {
+ echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$sql="UPDATE `product` SET 
+			`cust_id` =  '".$_POST["id"]."' , `Code` =  '".$_POST["cat_id"]."' WHERE Code  =  ".$Select_id; 
+//สังเกตุ การเชื่อมต่อระหว่างบรรทัด ด้วย จุด เพื่อลดความผิดพลาดในการเขียนโปรแกรม
+// สังเกตุ การส่งค่าแบบ ข้อความ กับ แบบตัวเลข จะแตกต่างกัน
+// ตรวจสอบเลข edit_id ให้ถูกต้องก่อนรัน SQL ไม่เช่นนั ้น จะเปลี่ยนข้อมูล id อื่นไปด้วย
+// ค าสั่ง WHERE เพื่อควบคุมการท างาน ให้Update เฉพาะ id ที่ส่งมา
+if (!mysqli_query($con,$sql)) { // 4.รัน SQL
+ die('Error: '. mysqli_error($con)); //แสดง error ถ้าท างานไม่ได้
+}
+//echo "1 record Update";
+
+mysqli_close($con);
+} // จบถ้ากดปุ่ ม ตกลง
+header('location: Menu_join.php'); 
+?>

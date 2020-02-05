@@ -1,0 +1,19 @@
+<?php
+include 'Banner_menu.php';
+
+$delete_id = $_POST["Code"];
+$vbotton = $_POST["valuesubmit"];
+$sql=" DELETE FROM product WHERE Code=" .$delete_id ;
+
+$con= mysqli_connect("localhost","root","","bestcat");
+If($vbottom=="OK"){
+If (mysqli_connect_errno()) {
+ echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$sql="DELETE FROM list WHERE Code=" .$delete_id ; /* SQL delete*/
+if (!mysqli_query($con,$sql)) { // รัน SQL
+ die('Error: ' . mysqli_error($con)); /*แสดง error ถ้าท างานไม่ได้*/
+}
+mysqli_close($conn); 
+header('location: Menu_delete.php');
+include 'Footer_menu.php';?>
